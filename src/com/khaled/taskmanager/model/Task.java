@@ -7,7 +7,6 @@ public class Task implements Completable {
     private String description;
     private boolean completed;
 
-    // Constructor
     public Task(int id, String title, String description) {
         this.id = id;
         this.title = title;
@@ -15,7 +14,6 @@ public class Task implements Completable {
         this.completed = false;
     }
 
-    // Getters
     public int getId() {
         return id;
     }
@@ -28,7 +26,6 @@ public class Task implements Completable {
         return description;
     }
 
-    // Interface methods
     @Override
     public void markCompleted() {
         this.completed = true;
@@ -39,7 +36,6 @@ public class Task implements Completable {
         return completed;
     }
 
-    // toString
     @Override
     public String toString() {
         return "Task{" +
