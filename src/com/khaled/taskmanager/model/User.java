@@ -1,0 +1,38 @@
+package com.khaled.taskmanager.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class User {
+
+    private int id;
+    private String name;
+    private List<Project> projects;
+
+    public User(int id, String name) {
+        this.id = id;
+        this.name = name;
+        this.projects = new ArrayList<>();
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public List<Project> getProjects() {
+        return projects;
+    }
+
+    public void addProject(Project project) {
+        projects.add(project);
+    }
+
+    @Override
+    public String toString() {
+        return "User{id=" + id + ", name='" + name + "', projects=" + projects.size() + "}";
+    }
+}
