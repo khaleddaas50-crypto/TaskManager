@@ -1,11 +1,13 @@
 package com.khaled.taskmanager.model;
+import com.khaled.taskmanager.model.Deadline;
 
-public class Task implements Completable {
+public class Task {
 
     private int id;
     private String title;
     private String description;
     private boolean completed;
+    private Deadline deadline;
 
     public Task(int id, String title, String description) {
         this.id = id;
@@ -14,34 +16,19 @@ public class Task implements Completable {
         this.completed = false;
     }
 
-    public int getId() {
-        return id;
+    public Deadline getDeadline() {
+        return deadline;
     }
 
-    public String getTitle() {
-        return title;
+    public void setDeadline(Deadline deadline) {
+        this.deadline = deadline;
     }
-
-    public String getDescription() {
-        return description;
-    }
-
-    @Override
-    public void markCompleted() {
-        this.completed = true;
-    }
-
-    @Override
     public boolean isCompleted() {
         return completed;
     }
 
-    @Override
-    public String toString() {
-        return "Task{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", completed=" + completed +
-                '}';
+
+    public void markCompleted() {
+        this.completed = true;
     }
 }
