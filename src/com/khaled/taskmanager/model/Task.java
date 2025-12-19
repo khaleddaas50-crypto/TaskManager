@@ -8,6 +8,14 @@ public class Task {
     private String description;
     private boolean completed;
     private Deadline deadline;
+    
+    public Task(int id, String title, String description, Deadline deadline) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.completed = false;
+        this.deadline = deadline;
+    }
 
     public Task(int id, String title, String description) {
         this.id = id;

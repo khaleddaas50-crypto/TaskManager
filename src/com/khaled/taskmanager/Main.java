@@ -5,6 +5,7 @@ import java.time.LocalDate;
 import com.khaled.taskmanager.model.Deadline;
 import com.khaled.taskmanager.model.Project;
 import com.khaled.taskmanager.model.Task;
+import com.khaled.taskmanager.model.TimedTask;
 
 public class Main {
 
@@ -23,5 +24,7 @@ public class Main {
 
         System.out.println(task2.getDeadline());
         System.out.println("Yaklasan mi? " + task2.getDeadline().isApproaching());
+        TimedTask timed = new TimedTask(3, "Timed task", "Inheritance test", 45);
+        System.out.println(timed);
     }
 }
