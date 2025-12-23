@@ -11,6 +11,10 @@ public class TimedTask extends Task {
 
     public TimedTask(int id, String title, String description, Deadline deadline, int durationMinutes) {
         super(id, title, description, deadline);
+        if (durationMinutes <= 0) {
+            throw new IllegalArgumentException("Duration must be positive");
+        }
+
         this.durationMinutes = durationMinutes;
     }
 

@@ -13,6 +13,13 @@ public class Task {
     private Priority priority;
 
     public Task(int id, String title, String description, Deadline deadline) {
+    	if (id <= 0) {
+    	    throw new IllegalArgumentException("Task id must be positive");
+    	}
+    	if (title == null || title.trim().isEmpty()) {
+    	    throw new IllegalArgumentException("Task title cannot be empty");
+    	}
+
         this.id = id;
         this.title = title;
         this.description = description;
@@ -50,6 +57,13 @@ public class Task {
         return null;
     }
     public Task(int id, String title, String description, Priority priority) {
+    	if (id <= 0) {
+    	    throw new IllegalArgumentException("Task id must be positive");
+    	}
+    	if (title == null || title.trim().isEmpty()) {
+    	    throw new IllegalArgumentException("Task title cannot be empty");
+    	}
+
         this.id = id;
         this.title = title;
         this.description = description;
