@@ -40,6 +40,7 @@ public class Project {
         }
         return result;
     }
+
     @Override
     public String toString() {
         return "Project{" +
@@ -49,4 +50,13 @@ public class Project {
                 '}';
     }
 
+    public boolean removeTaskById(int taskId) {
+        for (int i = 0; i < tasks.size(); i++) {
+            if (tasks.get(i).getId() == taskId) {
+                tasks.remove(i);
+                return true;
+            }
+        }
+        return false;
+    }
 }
