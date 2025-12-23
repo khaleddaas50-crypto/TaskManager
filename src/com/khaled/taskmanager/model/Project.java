@@ -40,4 +40,13 @@ public class Project {
         }
         return result;
     }
+    @Override
+    public String toString() {
+        return "Project{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", taskCount=" + (tasks != null ? tasks.size() : 0) +
+                '}';
+    }
+
 }

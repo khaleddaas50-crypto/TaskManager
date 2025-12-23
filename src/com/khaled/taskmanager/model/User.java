@@ -33,6 +33,11 @@ public class User {
 
     @Override
     public String toString() {
-        return "User{id=" + id + ", name='" + name + "', projects=" + projects.size() + "}";
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", projectCount=" + (projects != null ? projects.size() : 0) +
+                '}';
     }
+
 }

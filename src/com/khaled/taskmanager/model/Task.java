@@ -64,5 +64,15 @@ public class Task {
         this.priority = priority;
     }
 
+    @Override
+    public String toString() {
+        return "Task{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", completed=" + completed +
+                ", priority=" + (priority != null ? priority : "NONE") +
+                ", deadline=" + (deadline != null ? deadline.getDate() : "NONE") +
+                '}';
+    }
 
 }

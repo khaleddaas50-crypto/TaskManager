@@ -26,6 +26,8 @@ public class TimedTask extends Task {
     public String toString() {
         return "TimedTask{" +
                 "durationMinutes=" + durationMinutes +
-                ", task=" + super.toString() + '}';
+                ", base=" + super.toString() +
+                '}';
     }
+
 }

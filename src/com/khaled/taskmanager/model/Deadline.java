@@ -23,8 +23,6 @@ public class Deadline {
 
     @Override
     public String toString() {
-        return "Deadline{" +
-                "date=" + date +
-                '}';
+        return "Deadline{date=" + date + "}";
     }
 }
