@@ -40,6 +40,18 @@ public class Project {
         }
         return result;
     }
+    public List<Task> getApproachingTasks() {
+        List<Task> result = new ArrayList<>();
+
+        for (Task task : tasks) {
+            if (task.getDeadline() != null && task.getDeadline().isApproaching()) {
+                result.add(task);
+            }
+        }
+
+        return result;
+    }
+
 
     @Override
     public String toString() {

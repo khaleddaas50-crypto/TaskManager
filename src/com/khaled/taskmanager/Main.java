@@ -31,6 +31,11 @@ public class Main {
         Task task2 = new Task(2, "Project sinifi", "Project sinifini olustur");
         task2.setPriority(Priority.MEDIUM);
         task2.setDeadline(new Deadline(LocalDate.now().plusDays(1)));
+        System.out.println("Yaklaşan görevler:");
+        for (Task t : project.getApproachingTasks()) {
+            System.out.println(t);
+        }
+
 
         // 5) TimedTask olustur (inheritance)
         TimedTask timedTask = new TimedTask(3, "TimedTask testi", "Inheritance testi", 45);
