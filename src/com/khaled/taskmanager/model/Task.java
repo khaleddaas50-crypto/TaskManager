@@ -2,6 +2,11 @@ package com.khaled.taskmanager.model;
 import com.khaled.taskmanager.model.Deadline;
 import com.khaled.taskmanager.model.Notification;
 import com.khaled.taskmanager.model.Priority;
+/**
+ * Task sinifi bir gorevi temsil eder.
+ * Her task bir baslik, aciklama, oncelik ve deadline bilgisine sahiptir.
+ * Completable arayuzunu uygular.
+ */
 
 public class Task {
 
@@ -41,15 +46,29 @@ public class Task {
     public void setDeadline(Deadline deadline) {
         this.deadline = deadline;
     }
+    /**
+     * Gorevin tamamlanip tamamlanmadigini kontrol eder.
+     *
+     * @return true eger gorev tamamlandiysa
+     */
+
     public boolean isCompleted() {
         return completed;
     }
 
+    /**
+     * Gorevi tamamlanmis olarak isaretler.
+     */
 
     public void markCompleted() {
         this.completed = true;
     }
-    
+    /**
+     * Deadline yaklasiyorsa bildirim olusturur.
+     *
+     * @return Notification nesnesi veya null
+     */
+
     public Notification createDeadlineNotification() {
         if (deadline != null && deadline.isApproaching()) {
             return new Notification("Task '" + title + "' deadline is approaching");

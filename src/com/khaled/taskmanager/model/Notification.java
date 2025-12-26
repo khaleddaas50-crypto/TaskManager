@@ -1,5 +1,7 @@
-
 package com.khaled.taskmanager.model;
+/**
+ * Notification sinifi kullaniciya bildirim gondermek icin kullanilir.
+ */
 
 public class Notification {
     private String message;

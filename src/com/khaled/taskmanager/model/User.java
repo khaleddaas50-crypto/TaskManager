@@ -1,7 +1,10 @@
 package com.khaled.taskmanager.model;
-
 import java.util.ArrayList;
 import java.util.List;
+/**
+ * User sinifi sistemi kullanan kullaniciyi temsil eder.
+ * Kullaniciya ait projeleri tutar.
+ */
 
 public class User {
 

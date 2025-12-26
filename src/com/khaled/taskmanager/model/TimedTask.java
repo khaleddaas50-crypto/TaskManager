@@ -1,4 +1,8 @@
 package com.khaled.taskmanager.model;
+/**
+ * TimedTask sinifi, Task sinifindan turemistir.
+ * Gorevin tahmini suresini dakika cinsinden tutar.
+ */
 
 public class TimedTask extends Task {
 
