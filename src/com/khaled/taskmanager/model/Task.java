@@ -1,7 +1,4 @@
 package com.khaled.taskmanager.model;
-import com.khaled.taskmanager.model.Deadline;
-import com.khaled.taskmanager.model.Notification;
-import com.khaled.taskmanager.model.Priority;
 /**
  * Task sinifi bir gorevi temsil eder.
  * Her task bir baslik, aciklama, oncelik ve deadline bilgisine sahiptir.
