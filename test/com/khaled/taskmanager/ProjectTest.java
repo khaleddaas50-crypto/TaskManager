@@ -35,4 +35,23 @@ public class ProjectTest {
         assertEquals(1, project.getTasks().size());
         assertEquals(2, project.getTasks().get(0).getId());
     }
+
+
+@Test
+void getIncompleteTasks_shouldReturnOnlyIncompleteTasks() {
+    Project project = new Project(1, "Test Project");
+
+    Task t1 = new Task(1, "Task 1", "Desc");
+    Task t2 = new Task(2, "Task 2", "Desc");
+
+    project.addTask(t1);
+    project.addTask(t2);
+
+    // t1 tamamlandi
+    t1.markCompleted();
+
+    // sadece t2 incomplete olmali
+    assertEquals(1, project.getIncompleteTasks().size());
+    assertEquals(2, project.getIncompleteTasks().get(0).getId());
+    }
 }
