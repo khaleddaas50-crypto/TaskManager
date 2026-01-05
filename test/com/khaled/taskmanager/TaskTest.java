@@ -9,7 +9,7 @@ import com.khaled.taskmanager.model.Notification;
 
 public class TaskTest {
 
-    @Test
+    @Test 
     void newTask_shouldBeNotCompleted() {
         Task t = new Task(1, "Test", "Desc");
         assertFalse(t.isCompleted());
