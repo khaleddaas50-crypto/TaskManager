@@ -18,7 +18,6 @@ public class ProjectTest {
 	    assertEquals(1, project.getTasks().size());
 	}
 
-
     @Test
     void removeTaskById_shouldRemoveCorrectTask() {
         Project project = new Project(1, "Test Project");
@@ -75,4 +74,10 @@ void getIncompleteTasks_shouldReturnOnlyIncompleteTasks() {
     
 
     }
+    
+    @Test
+	void projectName_shouldNotBeNull() {
+	    Project project = new Project(1, "Test Project");
+	    assertNotNull(project);
+	}
 }

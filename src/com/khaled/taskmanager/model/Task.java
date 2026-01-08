@@ -13,6 +13,7 @@ public class Task {
     private boolean completed;
     private Deadline deadline;
     private Priority priority;
+    private String assignedUserName;
 
     public Task(int id, String title, String description, Deadline deadline) {
     	if (id <= 0) {
@@ -94,12 +95,21 @@ public class Task {
         this.priority = priority;
     }
 
+    public String getAssignedUserName() {
+        return assignedUserName;
+    }
+
+    public void setAssignedUserName(String assignedUserName) {
+        this.assignedUserName = assignedUserName;
+    }
+
     @Override
     public String toString() {
         return "Task{" +
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", completed=" + completed +
+                ", assignedUserName=" + (assignedUserName != null ? assignedUserName : "NONE") +
                 ", priority=" + (priority != null ? priority : "NONE") +
                 ", deadline=" + (deadline != null ? deadline.getDate() : "NONE") +
                 '}';
@@ -108,5 +118,9 @@ public class Task {
 	public int getId() {
 	    return id;
 	}
+	public String getTitle() {
+	    return title;
+	}
+
 
 }

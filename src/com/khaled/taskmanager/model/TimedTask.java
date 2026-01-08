@@ -33,8 +33,13 @@ public class TimedTask extends Task {
     @Override
     public String toString() {
         return "TimedTask{" +
-                "durationMinutes=" + durationMinutes +
-                ", base=" + super.toString() +
+                "id=" + getId() +
+                ", title='" + getTitle() + '\'' +
+                ", completed=" + isCompleted() +
+                ", assignedUserName=" + (getAssignedUserName() != null ? getAssignedUserName() : "NONE") +
+                ", priority=" + (getPriority() != null ? getPriority() : "NONE") +
+                ", deadline=" + (getDeadline() != null ? getDeadline().getDate() : "NONE") +
+                ", durationMinutes=" + durationMinutes +
                 '}';
     }
 

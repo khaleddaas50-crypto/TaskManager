@@ -1,6 +1,6 @@
 Project: OOP Proje (id=1)
 Task count: 3
 ----------------------------------
-Task{id=1, title='Task sinifi', completed=true, priority=HIGH, deadline=2026-01-05}
-Task{id=2, title='Project sinifi', completed=false, priority=MEDIUM, deadline=2026-01-04}
+Task{id=1, title='Task sinifi', completed=true, priority=HIGH, deadline=2026-01-09}
+Task{id=2, title='Project sinifi', completed=false, priority=MEDIUM, deadline=2026-01-08}
 TimedTask{durationMinutes=45, base=Task{id=3, title='TimedTask testi', completed=false, priority=LOW, deadline=NONE}}
